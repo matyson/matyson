@@ -40,7 +40,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
-        Oie, i'm Matheus 👋
+        {"Oie, i'm Matheus 👋"}
       </h1>
       <div className="flex flex-row gap-4 my-8">
         <div className="w-40">
@@ -79,9 +79,9 @@ export default function Page() {
         <p>
           I started out as a backend developer in the Scientific Computing Group
           at lnls, working with Python and Cuda to build optimized algorithms
-          focused mainly on imaging and image processing. But i think i've found
-          my place in the Javascript world, mostly doing React stuff to build
-          some crazy glowing buttons.
+          focused mainly on imaging and image processing. But i think i have
+          found my place in the Javascript world, mostly doing React stuff to
+          build some crazy glowing buttons.
         </p>
       </div>
       <div className="prose prose-neutral dark:prose-invert">
@@ -96,10 +96,10 @@ export default function Page() {
       </div>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          I feel like i can do anything in the web world and that's what i most
+          I feel like i can do anything in the web world and that is what i most
           love about it. If you like to follow my work, you can follow me on
           github. Also, feel free to reach out to me if you want to talk about
-          anything, i'm always open to meet new people and learn new things.
+          anything, i am always open to meet new people and learn new things.
         </p>
       </div>
       <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-600 dark:text-neutral-300">
@@ -128,19 +128,20 @@ export default function Page() {
       </ul>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
-          Enough about work, let's talk about Matheus. I'm a huge fan of music,
+          Enough about work, lets talk about Matheus. I am a huge fan of music,
           i love to play the guitar but in fact i kinda suck at it. So i focus
-          on singing and dancing, where i find that even if i'm embarrassed, i
-          can still have a lot of fun. Most of the time you'll find me on my
+          on singing and dancing, where i find that even if i am embarrassed, i
+          can still have a lot of fun. Most of the time you will find me on my
           earphones imersed in the playlists and lip syncing to the songs.
         </p>
       </div>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I also like to draw, i started out as a kid drawing my favorite
-          cartoon characters and now i'm trying to learn digital art. It's very
-          different from what i'm used to, specially the painting part because
-          i've always avoided it. But i'm having a good time just by trying it.
+          cartoon characters and now i am trying to learn digital art. It is
+          very different from what i am used to, specially the painting part
+          because i have always avoided it. But i am having a good time just by
+          trying it.
         </p>
       </div>
       <div className="grid grid-cols-3 gap-4 my-8">
