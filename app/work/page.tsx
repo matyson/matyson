@@ -14,16 +14,19 @@ export default function WorkPage() {
         <p>
           I am a mathematician and software developer. I love how math can be
           used as a lens to understand the world and solve both silly daily
-          conflicts and complex problems. I am loving to develop for the web
-          and i am eager to learn more about it.
+          conflicts and complex problems. I am loving to develop for the web and
+          i am eager to learn more about it.
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
         <h2 className="font-medium text-xl mb-1 tracking-tighter">CNPEM</h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Technology Development Analyst, 2019 - present
+          Senior Technology Development Analyst, 2019 - present
         </p>
         <p>
-          I am bla...
+          I first joined CNPEM as a young mathematician eager to apply
+          algorithms and optimization techniques to solve real-world problems.
+          In the meantime, i had contact with the web development world and i
+          fell in love with it.
         </p>
         <ul>
           <li>
@@ -34,19 +37,40 @@ export default function WorkPage() {
             experience, i grew a lot in this period, learning a lot about
             Python, Cuda and optimization of algorithms.
           </li>
-          <li>In 2020, after graduating from college</li>
-          <li>In 2023...</li>
+          <li>
+            In 2020, after graduating from college, i was hired as a full-time
+            employee at the Scientific Computing group. I mainly kept working on
+            image processing and reconstruction algorithms, but i also started
+            to work on web development, porting some desktop applications to the
+            web and pushing the group to adopt modern web technologies. Also, i
+            started to focus on the best pratices of software development,
+            enforcing better use of continuous integration and deployment, code
+            reviews and documentation.
+          </li>
+          <li>
+            In 2023, in function of my ever-growing interest in web development
+            and software engineering, i was transferred to the Control Software
+            group to work on the state of the art web applications that control
+            the accelerators and some processing web interfaces. My current goal
+            is to enable the LNLS to adopt modern web technologies and best
+            practices, hopefully making the web applications the stardards for
+            the accelerators community.
+          </li>
         </ul>
-        <p>
-         I feel like ...
-        </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">Other Experiences</h2>
+        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+          Other Experiences
+        </h2>
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
-          Teaching
+          Teaching, 2018 - 2019
         </p>
         <p>
-          Bla..
+          In my early years of college i was a bit lost and discouraged with
+          staying in the academic world. So i focused on one of the things that
+          i loved the most: teaching. I started to teach math and physics at
+          some preparatory courses for college entrance exams. I loved to teach
+          and i learned a lot as well. One day i hope to return to the teaching
+          world, but now with a lot more experience and knowledge.
         </p>
       </div>
     </section>
