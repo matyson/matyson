@@ -44,7 +44,7 @@ type ResumeProps = {
     };
 
 // Create Document Component
-export const Resume = ({ name, email, phone, summary, experience, education }: ResumeProps) => (
+const Resume = ({ name, email, phone, summary, experience, education }: ResumeProps) => (
   <PDFViewer className="h-screen">
     <Document>
     <Page size="A4" style={styles.page}>
@@ -83,3 +83,5 @@ export const Resume = ({ name, email, phone, summary, experience, education }: R
   </Document>
   </PDFViewer>
 );
+
+export default Resume;

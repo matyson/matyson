@@ -1,5 +1,9 @@
-import { Resume
- } from "../components/cv";
+import dynamic from 'next/dynamic'
+ 
+const Resume = dynamic(() => import('../components/cv'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false
+})
 
 const props = {
     name: "John Doe",
