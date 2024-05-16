@@ -1,52 +1,64 @@
 "use client";
 import React from "react";
-import { Page, Text, View, Document, StyleSheet, PDFViewer } from '@react-pdf/renderer';
+import {
+  Page,
+  Text,
+  View,
+  Document,
+  StyleSheet,
+  PDFViewer,
+} from "@react-pdf/renderer";
 
 // Create styles
 const styles = StyleSheet.create({
-    page: {
-      flexDirection: 'column',
-      backgroundColor: '#E4E4E4',
-    },
-    section: {
-      margin: 10,
-      padding: 10,
-      flexGrow: 1,
-    },
-    heading: {
-      fontSize: 20,
-      marginBottom: 10,
-      fontWeight: 'bold',
-    },
-    text: {
-      fontSize: 12,
-      marginBottom: 5,
-    },
-  });
+  page: {
+    flexDirection: "column",
+    backgroundColor: "#E4E4E4",
+  },
+  section: {
+    margin: 10,
+    padding: 10,
+    flexGrow: 1,
+  },
+  heading: {
+    fontSize: 20,
+    marginBottom: 10,
+    fontWeight: "bold",
+  },
+  text: {
+    fontSize: 12,
+    marginBottom: 5,
+  },
+});
 
-
-type ResumeProps = {
-    name: string;
-    email: string;
-    phone: string;
-    summary: string;
-    experience: {
-        title: string;
-        company: string;
-        date: string;
-        description: string;
-    }[];
-    education: {
-        degree: string;
-        institution: string;
-        date: string;
-    }[];
-    };
+export type ResumeProps = {
+  name: string;
+  email: string;
+  phone: string;
+  summary: string;
+  experience: {
+    title: string;
+    company: string;
+    date: string;
+    description: string;
+  }[];
+  education: {
+    degree: string;
+    institution: string;
+    date: string;
+  }[];
+};
 
 // Create Document Component
-const Resume = ({ name, email, phone, summary, experience, education }: ResumeProps) => (
-  <PDFViewer className="h-screen">
-    <Document>
+export const MyDocument = ({
+  name,
+  email,
+  phone,
+  summary,
+  experience,
+  education,
+}: ResumeProps) => (
+  <Document>
     <Page size="A4" style={styles.page}>
       <View style={styles.section}>
         <Text style={styles.heading}>Personal Information</Text>
@@ -81,7 +93,14 @@ const Resume = ({ name, email, phone, summary, experience, education }: ResumePr
       </View>
     </Page>
   </Document>
-  </PDFViewer>
 );
+
+const Resume = (props: ResumeProps) => {
+  return (
+    <PDFViewer width="100%" height="100%">
+      <MyDocument {...props} />
+    </PDFViewer>
+  );
+};
 
 export default Resume;

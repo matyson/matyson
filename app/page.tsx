@@ -8,6 +8,12 @@ import hayley from "../public/images/home/hayley.jpeg";
 import cold from "../public/images/home/cold.jpeg";
 import husky from "../public/images/home/husky.jpeg";
 import zelda from "../public/images/home/zelda.jpeg";
+import dynamic from "next/dynamic";
+
+const DownloadResume = dynamic(() => import("./components/download-resume"), {
+  ssr: false,
+  loading: () => <p>Loading...</p>,
+});
 
 function Badge(props) {
   return (
@@ -36,14 +42,42 @@ function ArrowIcon() {
   );
 }
 
+const props = {
+  name: "John Doe",
+  email: "john@doe.com",
+  phone: "123-456-7890",
+  summary: "A summary of John Doe",
+  experience: [
+    {
+      title: "Software Engineer",
+      company: "Google",
+      date: "2020 - Present",
+      description: "Worked on various projects",
+    },
+    {
+      title: "Software Engineer",
+      company: "Facebook",
+      date: "2018 - 2020",
+      description: "Worked on various projects",
+    },
+  ],
+  education: [
+    {
+      degree: "BSc in Computer Science",
+      institution: "MIT",
+      date: "2014 - 2018",
+    },
+  ],
+};
+
 export default function Page() {
   return (
     <section>
       <h1 className="font-medium text-2xl mb-8 tracking-tighter">
         {"Oie, i'm Matheus 👋"}
       </h1>
-      <div className="flex flex-row gap-4 my-8">
-        <div className="w-40">
+      <div className="flex items-center gap-4 my-8">
+        <div className="w-44">
           <Image
             src={me}
             alt="me"
@@ -52,7 +86,7 @@ export default function Page() {
             sizes="(min-width: 768px) 213px, 33vw"
           />
         </div>
-        <div className="w-40">
+        <div className="w-44">
           <Image
             src={toonme}
             alt="toon me"
@@ -125,6 +159,9 @@ export default function Page() {
             <p className="h-7 ml-2">follow me</p>
           </a>
         </li>
+        <li>
+          <DownloadResume {...props} />
+        </li>
       </ul>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
@@ -144,8 +181,8 @@ export default function Page() {
           trying it.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-4 my-8">
-        <div className="">
+      <div className="flex flex-wrap gap-4 my-8">
+        <div className="w-44">
           <Image
             src={hayley}
             alt="Hayley Williams performing Last Hope, one of my favorite songs"
@@ -154,7 +191,7 @@ export default function Page() {
             sizes="(min-width: 768px) 213px, 33vw"
           />
         </div>
-        <div className="">
+        <div className="w-44">
           <Image
             src={gu}
             alt="My friend Augusto yapping"
@@ -163,7 +200,7 @@ export default function Page() {
             sizes="(min-width: 768px) 213px, 33vw"
           />
         </div>
-        <div className="">
+        <div className="w-44">
           <Image
             src={cold}
             alt="A cold evening walk"
@@ -172,7 +209,7 @@ export default function Page() {
             sizes="(min-width: 768px) 213px, 33vw"
           />
         </div>
-        <div className="row-span-2 col-span-2">
+        <div className="w-44">
           <Image
             src={husky}
             alt="A husky dog"
@@ -181,7 +218,7 @@ export default function Page() {
             sizes="(min-width: 768px) 213px, 33vw"
           />
         </div>
-        <div className="">
+        <div className="w-44">
           <Image
             src={gogo}
             alt="my friend Igor as Hulk"
@@ -190,7 +227,7 @@ export default function Page() {
             sizes="(min-width: 768px) 213px, 33vw"
           />
         </div>
-        <div className="">
+        <div className="w-44">
           <Image
             src={zelda}
             alt="Master Sword in the Lost Woods"
