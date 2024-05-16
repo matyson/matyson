@@ -9,11 +9,7 @@ import cold from "../public/images/home/cold.jpeg";
 import husky from "../public/images/home/husky.jpeg";
 import zelda from "../public/images/home/zelda.jpeg";
 import dynamic from "next/dynamic";
-
-const DownloadResume = dynamic(() => import("./components/download-resume"), {
-  ssr: false,
-  loading: () => <p>Loading...</p>,
-});
+import { DownloadIcon } from "./components/download-resume";
 
 function Badge(props) {
   return (
@@ -41,34 +37,6 @@ function ArrowIcon() {
     </svg>
   );
 }
-
-const props = {
-  name: "John Doe",
-  email: "john@doe.com",
-  phone: "123-456-7890",
-  summary: "A summary of John Doe",
-  experience: [
-    {
-      title: "Software Engineer",
-      company: "Google",
-      date: "2020 - Present",
-      description: "Worked on various projects",
-    },
-    {
-      title: "Software Engineer",
-      company: "Facebook",
-      date: "2018 - 2020",
-      description: "Worked on various projects",
-    },
-  ],
-  education: [
-    {
-      degree: "BSc in Computer Science",
-      institution: "MIT",
-      date: "2014 - 2018",
-    },
-  ],
-};
 
 export default function Page() {
   return (
@@ -160,7 +128,14 @@ export default function Page() {
           </a>
         </li>
         <li>
-          <DownloadResume {...props} />
+          <a
+            href="/MatheusBernardi_Resume.pdf"
+            download
+            className="flex gap-2 items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
+          >
+            <DownloadIcon />
+            my resume
+          </a>
         </li>
       </ul>
       <div className="prose prose-neutral dark:prose-invert">

@@ -2,7 +2,7 @@
 import { PDFDownloadLink } from "@react-pdf/renderer";
 import { MyDocument, type ResumeProps } from "./resume";
 
-function DownloadIcon() {
+export function DownloadIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -4,9 +4,12 @@ import {
   Page,
   Text,
   View,
+  Link,
   Document,
   StyleSheet,
   PDFViewer,
+  Line,
+  Svg,
 } from "@react-pdf/renderer";
 
 // Create styles
@@ -19,6 +22,7 @@ const styles = StyleSheet.create({
     margin: 10,
     padding: 10,
     flexGrow: 1,
+    flexDirection: "row",
   },
   heading: {
     fontSize: 20,
@@ -30,6 +34,30 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+type Social = {
+  name: string;
+  url: string;
+};
+
+const socials: Social[] = [
+  {
+    name: "matheus-bernardi",
+    url: "https://linkedin.com/in/matheus-bernardi",
+  },
+  {
+    name: "matyson",
+    url: "https://github.com/matyson",
+  },
+  {
+    name: "matyson.github.io",
+    url: "https://matyson.github.io",
+  },
+  {
+    name: "matheuslbernardi@gmail.com",
+    url: "mailto:matheuslbernardi@gmail.com",
+  },
+];
 
 export type ResumeProps = {
   name: string;
@@ -60,16 +88,41 @@ export const MyDocument = ({
 }: ResumeProps) => (
   <Document>
     <Page size="A4" style={styles.page}>
-      <View style={styles.section}>
-        <Text style={styles.heading}>Personal Information</Text>
-        <Text style={styles.text}>Name: {name}</Text>
-        <Text style={styles.text}>Email: {email}</Text>
-        <Text style={styles.text}>Phone: {phone}</Text>
+      <View
+        style={{
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: "flex-start",
+          padding: 10,
+          gap: 10,
+          alignItems: "baseline",
+        }}
+      >
+        <Text
+          style={{
+            fontSize: 20,
+            fontWeight: "semibold",
+          }}
+        >
+          Matheus L. Bernardi
+        </Text>
+        {socials.map((social, index) => (
+          <Link
+            key={index}
+            src={social.url}
+            style={{
+              color: "blue",
+              fontSize: 10,
+            }}
+          >
+            {social.name}
+          </Link>
+        ))}
       </View>
-      <View style={styles.section}>
-        <Text style={styles.heading}>Summary</Text>
-        <Text style={styles.text}>{summary}</Text>
-      </View>
+
+      <Svg height={1} width="585" style={{ marginBottom: 10 }}>
+        <Line x1="10" y1="0" x2="100%" y2="0" stroke="black" strokeWidth="1" />
+      </Svg>
       <View style={styles.section}>
         <Text style={styles.heading}>Experience</Text>
         {experience.map((exp, index) => (
