@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import { Footer } from "./components/footer";
 import { Navbar } from "./components/nav";
 import { cn } from "./lib/utils";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <main className="mt-6 flex min-w-0 flex-auto flex-col px-2 md:px-0">
           <Navbar />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
