@@ -4,9 +4,8 @@ import { formatDate } from "@/app/lib/utils";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export async function generateMetadata({
-  params,
-}: PostProps): Promise<Metadata | undefined> {
+export async function generateMetadata(props: PostProps): Promise<Metadata | undefined> {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
   if (!post) {
     return;
@@ -19,10 +18,11 @@ export async function generateMetadata({
 }
 
 interface PostProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
-const Post = ({ params }: PostProps) => {
+const Post = async (props: PostProps) => {
+  const params = await props.params;
   let post = getBlogPosts().find((post) => post.slug === params.slug);
 
   if (!post) {
