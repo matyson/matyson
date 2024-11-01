@@ -66,10 +66,10 @@ export default function Page() {
           anything, i am always open to meet new people and learn new things.
         </p>
       </div>
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
+      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 dark:text-neutral-300 md:flex-row md:space-x-4 md:space-y-0">
         <li>
           <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-emerald-500"
+            className="flex items-center transition-all hover:text-emerald-500"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/matyson"
@@ -82,7 +82,7 @@ export default function Page() {
           <a
             href="/MatheusBernardi_Resume_102024.pdf"
             download
-            className="flex items-center gap-2 transition-all hover:text-neutral-800 dark:hover:text-emerald-500"
+            className="flex items-center gap-2 transition-all hover:text-emerald-500"
           >
             <DownloadIcon className="h-4 w-4" />
             my resume
@@ -114,7 +114,7 @@ export default function Page() {
               src={hayley}
               alt="Hayley Williams performing Last Hope, one of my favorite songs"
               placeholder="blur"
-              className="rounded-lg object-contain"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -123,7 +123,7 @@ export default function Page() {
               src={gu}
               alt="My friend Augusto yapping"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -134,7 +134,7 @@ export default function Page() {
               src={toonme}
               alt="My toonme"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -143,7 +143,7 @@ export default function Page() {
               src={cold}
               alt="A cold evening walk"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -154,7 +154,7 @@ export default function Page() {
               src={husky}
               alt="A husky dog"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -163,7 +163,7 @@ export default function Page() {
               src={profile}
               alt="profile"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -174,7 +174,7 @@ export default function Page() {
               src={gogo}
               alt="my friend Igor as Hulk"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>
@@ -183,7 +183,7 @@ export default function Page() {
               src={zelda}
               alt="Master Sword in the Lost Woods"
               placeholder="blur"
-              className="rounded-lg"
+              className="rounded-lg shadow-lg"
               sizes="(min-width: 768px) 213px, 33vw"
             />
           </div>

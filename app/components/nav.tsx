@@ -13,8 +13,6 @@ const navItems = {
   },
 };
 
-type Params = Promise<{ slug: string }>;
-
 export function Navbar() {
   const pathname = usePathname();
   return (
@@ -31,7 +29,7 @@ export function Navbar() {
                   key={path}
                   href={path}
                   className={cn(
-                    "relative flex px-2 py-1 align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-300",
+                    "relative flex px-2 py-1 align-middle transition-all hover:text-neutral-700 dark:hover:text-neutral-300",
                     { "font-semibold text-emerald-500": pathname === path },
                   )}
                 >
