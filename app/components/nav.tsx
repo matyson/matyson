@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "../lib/utils";
 
 const navItems = {
   "/": {
@@ -9,7 +13,10 @@ const navItems = {
   },
 };
 
+type Params = Promise<{ slug: string }>;
+
 export function Navbar() {
+  const pathname = usePathname();
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -23,7 +30,10 @@ export function Navbar() {
                 <Link
                   key={path}
                   href={path}
-                  className="relative flex px-2 py-1 align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-200"
+                  className={cn(
+                    "relative flex px-2 py-1 align-middle transition-all hover:text-neutral-800 dark:hover:text-neutral-300",
+                    { "font-semibold text-emerald-500": pathname === path },
+                  )}
                 >
                   {name}
                 </Link>
