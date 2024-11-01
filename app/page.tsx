@@ -9,6 +9,7 @@ import husky from "../public/images/home/husky.jpeg";
 import profile from "../public/images/home/profile.jpeg";
 import toonme from "../public/images/home/toon-me.jpeg";
 import zelda from "../public/images/home/zelda.jpeg";
+import { Animated } from "./components/animated";
 
 function Badge(props) {
   return (
@@ -24,7 +25,7 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
-        {"Oie, i'm Matheus 👋"}
+        <Animated text="Oie, i'm Matheus" /> 👋
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
         {`I'm a mathematician who actually code some frontend stuff. I currently `}
