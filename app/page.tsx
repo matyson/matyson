@@ -8,8 +8,6 @@ import hayley from "../public/images/home/hayley.jpeg";
 import cold from "../public/images/home/cold.jpeg";
 import husky from "../public/images/home/husky.jpeg";
 import zelda from "../public/images/home/zelda.jpeg";
-import dynamic from "next/dynamic";
-import { DownloadIcon } from "./components/download-resume";
 
 function Badge(props) {
   return (
@@ -133,7 +131,6 @@ export default function Page() {
             download
             className="flex gap-2 items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
           >
-            <DownloadIcon />
             my resume
           </a>
         </li>
