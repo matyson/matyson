@@ -6,7 +6,7 @@ import gogo from "../public/images/home/gogo.jpeg";
 import gu from "../public/images/home/gu.jpeg";
 import hayley from "../public/images/home/hayley.jpeg";
 import husky from "../public/images/home/husky.jpeg";
-import me from "../public/images/home/me.jpeg";
+import profile from "../public/images/home/profile.jpeg";
 import toonme from "../public/images/home/toon-me.jpeg";
 import zelda from "../public/images/home/zelda.jpeg";
 
@@ -26,27 +26,6 @@ export default function Page() {
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
         {"Oie, i'm Matheus 👋"}
       </h1>
-      <div className="my-8 flex items-center gap-4">
-        <div className="w-44">
-          <Image
-            src={me}
-            alt="me"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
-        </div>
-        <div className="w-44">
-          <Image
-            src={toonme}
-            alt="toon me"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
-        </div>
-      </div>
-
       <p className="prose prose-neutral dark:prose-invert">
         {`I'm a mathematician who actually code some frontend stuff. I currently `}
         <Link href="/work">work</Link>
@@ -127,60 +106,86 @@ export default function Page() {
           trying it.
         </p>
       </div>
-      <div className="my-8 flex flex-wrap gap-4">
-        <div className="w-44">
-          <Image
-            src={hayley}
-            alt="Hayley Williams performing Last Hope, one of my favorite songs"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
+      <div className="grid grid-cols-4 items-center gap-2">
+        <div className="grid gap-2">
+          <div className="h-auto max-w-full">
+            <Image
+              src={hayley}
+              alt="Hayley Williams performing Last Hope, one of my favorite songs"
+              placeholder="blur"
+              className="rounded-lg object-contain"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
+          <div className="h-auto max-w-full">
+            <Image
+              src={gu}
+              alt="My friend Augusto yapping"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
         </div>
-        <div className="w-44">
-          <Image
-            src={gu}
-            alt="My friend Augusto yapping"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
+        <div className="grid gap-2">
+          <div className="h-auto max-w-full">
+            <Image
+              src={toonme}
+              alt="My toonme"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
+          <div className="h-auto max-w-full">
+            <Image
+              src={cold}
+              alt="A cold evening walk"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
         </div>
-        <div className="w-44">
-          <Image
-            src={cold}
-            alt="A cold evening walk"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
+        <div className="grid gap-2">
+          <div className="h-auto max-w-full">
+            <Image
+              src={husky}
+              alt="A husky dog"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
+          <div className="h-auto max-w-full">
+            <Image
+              src={profile}
+              alt="profile"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
         </div>
-        <div className="w-44">
-          <Image
-            src={husky}
-            alt="A husky dog"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
-        </div>
-        <div className="w-44">
-          <Image
-            src={gogo}
-            alt="my friend Igor as Hulk"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
-        </div>
-        <div className="w-44">
-          <Image
-            src={zelda}
-            alt="Master Sword in the Lost Woods"
-            placeholder="blur"
-            className="rounded-lg"
-            sizes="(min-width: 768px) 213px, 33vw"
-          />
+        <div className="grid gap-2">
+          <div className="h-auto max-w-full">
+            <Image
+              src={gogo}
+              alt="my friend Igor as Hulk"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
+          <div className="h-auto max-w-full">
+            <Image
+              src={zelda}
+              alt="Master Sword in the Lost Woods"
+              placeholder="blur"
+              className="rounded-lg"
+              sizes="(min-width: 768px) 213px, 33vw"
+            />
+          </div>
         </div>
       </div>
     </section>
