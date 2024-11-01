@@ -1,12 +1,13 @@
-import Link from "next/link";
 import Image from "next/image";
-import me from "../public/images/home/me.jpeg";
-import toonme from "../public/images/home/toon-me.jpeg";
+import Link from "next/link";
+import { DownloadIcon, MoveUpRightIcon } from "lucide-react";
+import cold from "../public/images/home/cold.jpeg";
 import gogo from "../public/images/home/gogo.jpeg";
 import gu from "../public/images/home/gu.jpeg";
 import hayley from "../public/images/home/hayley.jpeg";
-import cold from "../public/images/home/cold.jpeg";
 import husky from "../public/images/home/husky.jpeg";
+import me from "../public/images/home/me.jpeg";
+import toonme from "../public/images/home/toon-me.jpeg";
 import zelda from "../public/images/home/zelda.jpeg";
 
 function Badge(props) {
@@ -14,35 +15,18 @@ function Badge(props) {
     <a
       {...props}
       target="_blank"
-      className="border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm inline-flex items-center leading-4 text-neutral-900 dark:text-neutral-100 no-underline"
+      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
     />
-  );
-}
-
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
 
 export default function Page() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">
+      <h1 className="mb-8 text-2xl font-medium tracking-tighter">
         {"Oie, i'm Matheus 👋"}
       </h1>
-      <div className="flex items-center gap-4 my-8">
+      <div className="my-8 flex items-center gap-4">
         <div className="w-44">
           <Image
             src={me}
@@ -102,35 +86,25 @@ export default function Page() {
           anything, i am always open to meet new people and learn new things.
         </p>
       </div>
-      <ul className="flex flex-col md:flex-row mt-8 space-x-0 md:space-x-4 space-y-2 md:space-y-0 font-sm text-neutral-600 dark:text-neutral-300">
+      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
         <li>
           <a
-            className="flex items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
+            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
             rel="noopener noreferrer"
             target="_blank"
             href="https://github.com/matyson"
           >
-            <ArrowIcon />
-            <p className="h-7 ml-2">github</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://instagram.com/matheustyson"
-          >
-            <ArrowIcon />
-            <p className="h-7 ml-2">follow me</p>
+            <MoveUpRightIcon className="h-4 w-4" />
+            <p className="ml-1 h-7">github</p>
           </a>
         </li>
         <li>
           <a
             href="/MatheusBernardi_Resume.pdf"
             download
-            className="flex gap-2 items-center hover:text-neutral-800 dark:hover:text-neutral-100 transition-all"
+            className="flex items-center gap-2 transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
           >
+            <DownloadIcon className="h-4 w-4" />
             my resume
           </a>
         </li>
@@ -153,7 +127,7 @@ export default function Page() {
           trying it.
         </p>
       </div>
-      <div className="flex flex-wrap gap-4 my-8">
+      <div className="my-8 flex flex-wrap gap-4">
         <div className="w-44">
           <Image
             src={hayley}

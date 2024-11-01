@@ -1,8 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image';
-import { MDXRemote } from 'next-mdx-remote/rsc';
-import { highlight } from 'sugar-high';
-import React from 'react';
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { highlight } from "sugar-high";
 
 function Table({ data }) {
   let headers = data.headers.map((header, index) => (
@@ -29,7 +29,7 @@ function Table({ data }) {
 function CustomLink(props) {
   let href = props.href;
 
-  if (href.startsWith('/')) {
+  if (href.startsWith("/")) {
     return (
       <Link href={href} {...props}>
         {props.children}
@@ -37,7 +37,7 @@ function CustomLink(props) {
     );
   }
 
-  if (href.startsWith('#')) {
+  if (href.startsWith("#")) {
     return <a {...props} />;
   }
 
@@ -50,21 +50,21 @@ function RoundedImage(props) {
 
 function Callout(props) {
   return (
-    <div className="px-4 py-3 border border-neutral-200 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800 rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
-      <div className="flex items-center w-4 mr-4">{props.emoji}</div>
-      <div className="w-full callout">{props.children}</div>
+    <div className="mb-8 flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 px-4 py-3 text-sm text-neutral-900 dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100">
+      <div className="mr-4 flex w-4 items-center">{props.emoji}</div>
+      <div className="callout w-full">{props.children}</div>
     </div>
   );
 }
 
 function ProsCard({ title, pros }) {
   return (
-    <div className="border border-emerald-200 dark:border-emerald-900 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-6 my-4 w-full">
+    <div className="my-4 w-full rounded-xl border border-emerald-200 bg-neutral-50 p-6 dark:border-emerald-900 dark:bg-neutral-900">
       <span>{`You might use ${title} if...`}</span>
       <div className="mt-4">
         {pros.map((pro) => (
-          <div key={pro} className="flex font-medium items-baseline mb-2">
-            <div className="h-4 w-4 mr-2">
+          <div key={pro} className="mb-2 flex items-baseline font-medium">
+            <div className="mr-2 h-4 w-4">
               <svg className="h-4 w-4 text-emerald-500" viewBox="0 0 24 24">
                 <g
                   fill="none"
@@ -88,12 +88,12 @@ function ProsCard({ title, pros }) {
 
 function ConsCard({ title, cons }) {
   return (
-    <div className="border border-red-200 dark:border-red-900 bg-neutral-50 dark:bg-neutral-900 rounded-xl p-6 my-6 w-full">
+    <div className="my-6 w-full rounded-xl border border-red-200 bg-neutral-50 p-6 dark:border-red-900 dark:bg-neutral-900">
       <span>{`You might not use ${title} if...`}</span>
       <div className="mt-4">
         {cons.map((con) => (
-          <div key={con} className="flex font-medium items-baseline mb-2">
-            <div className="h-4 w-4 mr-2">
+          <div key={con} className="mb-2 flex items-baseline font-medium">
+            <div className="mr-2 h-4 w-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -121,10 +121,10 @@ function slugify(str) {
     .toString()
     .toLowerCase()
     .trim() // Remove whitespace from both ends of a string
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(/&/g, '-and-') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word characters except for -
-    .replace(/\-\-+/g, '-'); // Replace multiple - with single -
+    .replace(/\s+/g, "-") // Replace spaces with -
+    .replace(/&/g, "-and-") // Replace & with 'and'
+    .replace(/[^\w\-]+/g, "") // Remove all non-word characters except for -
+    .replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
 function createHeading(level: number) {
@@ -140,7 +140,7 @@ function createHeading(level: number) {
           className: "anchor",
         }),
       ],
-      children
+      children,
     );
   };
 }

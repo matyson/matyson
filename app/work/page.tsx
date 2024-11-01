@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <section>
-      <h1 className="font-medium text-2xl mb-8 tracking-tighter">my work</h1>
+      <h1 className="mb-8 text-2xl font-medium tracking-tighter">my work</h1>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I am a mathematician and software developer. I love how math can be
@@ -17,8 +17,8 @@ export default function WorkPage() {
           i am eager to learn more about it.
         </p>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">CNPEM</h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        <h2 className="mb-1 text-xl font-medium tracking-tighter">CNPEM</h2>
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Senior Technology Development Analyst, 2019 - present
         </p>
         <p>
@@ -57,10 +57,10 @@ export default function WorkPage() {
           </li>
         </ul>
         <hr className="my-6 border-neutral-100 dark:border-neutral-800" />
-        <h2 className="font-medium text-xl mb-1 tracking-tighter">
+        <h2 className="mb-1 text-xl font-medium tracking-tighter">
           Other Experiences
         </h2>
-        <p className="text-neutral-600 dark:text-neutral-400 text-sm">
+        <p className="text-sm text-neutral-600 dark:text-neutral-400">
           Teaching, 2018 - 2019
         </p>
         <p>
