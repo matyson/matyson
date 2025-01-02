@@ -80,7 +80,7 @@ export default function Page() {
         </li>
         <li>
           <a
-            href="/MatheusBernardi_Resume_102024.pdf"
+            href="/MatheusBernardi_resume.pdf"
             download
             className="flex items-center gap-2 transition-all hover:text-emerald-500"
           >
