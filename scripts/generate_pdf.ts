@@ -19,16 +19,26 @@ async function generatePDF() {
           left: "20mm",
         },
         headerTemplate: `<style>
-      section {
-        margin: 0 auto;
-        font-family: system-ui;
-        font-size: 11px;
-      }
-    </style>
-    <section>
-      <span class="title"></span>
-      <span>${new Date().toDateString()}</span>
-    </section>`,
+        section {
+            margin: 0 auto;
+            font-family: system-ui;
+            font-size: 11px;
+        }
+        </style>
+        <section>
+        <span class="title"></span>
+        <span>${new Date().toDateString()}</span>
+        </section>`,
+        footerTemplate: `<style>
+        section {
+            margin: 0 auto;
+            font-family: system-ui;
+            font-size: 11px;
+            }
+        </style>
+        <section>
+            <span class="pageNumber"></span> of <span class="totalPages"></span>
+        </section>`,
       },
     },
   ).catch(console.error);
