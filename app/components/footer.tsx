@@ -19,7 +19,7 @@ export function Footer() {
           </a>
         ))}
         <a
-          href="/MatheusBernardi_Resume_102024.pdf"
+          href="/MatheusBernardi_resume.pdf"
           download
           className="text-slate-400 transition-colors duration-200 hover:text-emerald-500"
         >
