@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Link } from "next-view-transitions";
 import { cn } from "../lib/utils";
 
 const navItems = {
