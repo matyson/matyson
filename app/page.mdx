@@ -1,0 +1,143 @@
+import Image from "next/image";
+import Link from "next/link";
+import { DownloadIcon, MoveUpRightIcon } from "lucide-react";
+import cold from "../public/images/home/cold.jpeg";
+import gogo from "../public/images/home/gogo.jpeg";
+import gu from "../public/images/home/gu.jpeg";
+import hayley from "../public/images/home/hayley.jpeg";
+import husky from "../public/images/home/husky.jpeg";
+import profile from "../public/images/home/profile.jpeg";
+import toonme from "../public/images/home/toon-me.jpeg";
+import zelda from "../public/images/home/zelda.jpeg";
+import { Animated } from "./components/animated";
+
+export function Badge(props) {
+  return (
+    <a
+      {...props}
+      target="_blank"
+      className="inline-flex items-center rounded border border-neutral-200 bg-neutral-50 p-1 text-sm leading-4 text-neutral-900 no-underline dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-100"
+    />
+  );
+}
+
+# <Animated text="Oie, i'm Matheus" /> 👋
+
+I'm a mathematician with a passion for frontend development. Currently, I [work](/work) as a developer at <Badge href="https://cnpem.br/">@cnpem</Badge> in Brazil's national synchrotron light laboratory, <Badge href="https://www.lnls.cnpem.br/en/">@lnls</Badge>.
+
+My journey began in the Scientific Computing Group at LNLS, where I developed optimized algorithms using Python and CUDA, primarily focusing on image processing. However, I discovered my true calling in the JavaScript ecosystem, where I've found joy in crafting experiences with React – and yes, occasionally creating some fancy glowing buttons!
+
+This unique combination of mathematical thinking and frontend expertise has proven invaluable in my current role. I collaborate with scientists to develop web applications that support their research and experiments. From building control systems for beamlines to creating data visualization tools and even experimenting with unconventional drawing applications, each project presents exciting new challenges.
+
+What I love most about web development is its limitless potential for creativity and problem-solving. I'm always eager to connect with fellow developers and tech enthusiasts – whether it's to discuss code, share ideas, or collaborate on projects. You can find my work on GitHub, and I'm always open to interesting conversations and new opportunities.
+
+<div className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 dark:text-neutral-300 md:flex-row md:space-x-4 md:space-y-0">
+  <div>
+    <a
+      className="flex items-center transition-all hover:text-emerald-500"
+      rel="noopener noreferrer"
+      target="_blank"
+      href="https://github.com/matyson"
+    >
+      <MoveUpRightIcon className="h-4 w-4" />
+      <p className="ml-1 h-7">github</p>
+    </a>
+  </div>
+  <div>
+    <a
+      href="/MatheusBernardi_resume.pdf"
+      download
+      className="flex items-center gap-2 transition-all hover:text-emerald-500"
+    >
+      <DownloadIcon className="h-4 w-4" />
+      my resume
+    </a>
+  </div>
+</div>
+
+Beyond the world of code, I'm an enthusiastic music lover. While my guitar skills might need some work, I find pure joy in singing and dancing – even if I'm not exactly ready for Broadway! You'll often find me lost in my favorite playlists, lip-syncing and dancing like nobody's watching.
+
+Art has been another constant in my life, evolving from childhood sketches of cartoon characters to my current exploration of digital art. The transition to digital medium has been both challenging and exciting, especially when it comes to digital painting – a technique I've traditionally avoided but am now embracing as part of my creative journey.
+
+<div className="grid grid-cols-4 items-center gap-2">
+  <div className="grid gap-2">
+    <div className="h-auto max-w-full">
+      <Image
+        src={hayley}
+        alt="Hayley Williams performing Last Hope, one of my favorite songs"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+    <div className="h-auto max-w-full">
+      <Image
+        src={gu}
+        alt="My friend Augusto yapping"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+  </div>
+  <div className="grid gap-2">
+    <div className="h-auto max-w-full">
+      <Image
+        src={toonme}
+        alt="My toonme"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+    <div className="h-auto max-w-full">
+      <Image
+        src={cold}
+        alt="A cold evening walk"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+  </div>
+  <div className="grid gap-2">
+    <div className="h-auto max-w-full">
+      <Image
+        src={husky}
+        alt="A husky dog"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+    <div className="h-auto max-w-full">
+      <Image
+        src={profile}
+        alt="profile"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+  </div>
+  <div className="grid gap-2">
+    <div className="h-auto max-w-full">
+      <Image
+        src={gogo}
+        alt="my friend Igor as Hulk"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+    <div className="h-auto max-w-full">
+      <Image
+        src={zelda}
+        alt="Master Sword in the Lost Woods"
+        placeholder="blur"
+        className="rounded-lg shadow-lg"
+        sizes="(min-width: 768px) 213px, 33vw"
+      />
+    </div>
+  </div>
+</div>
