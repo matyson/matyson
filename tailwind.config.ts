@@ -3,7 +3,7 @@ import typography from "@tailwindcss/typography";
 import animate from "tailwindcss-animate";
 
 export default {
-  content: ["./app/**/*.{ts,tsx,mdx}", "./public/**/*.svg"],
+  content: ["./app/**/*.{ts,tsx,mdx}", "./public/**/*.svg", "./mdx-components.tsx"],
   darkMode: ["class"],
   theme: {
     container: {
