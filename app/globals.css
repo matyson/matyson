@@ -39,6 +39,15 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+
+    --sh-class: #7aa2f7;
+    --sh-sign: #89ddff;
+    --sh-string: #9ece6a;
+    --sh-keyword: #bb9af7;
+    --sh-comment: #565f89;
+    --sh-jsxliterals: #7aa2f7;
+    --sh-property: #73daca;
+    --sh-entity: #e0af68;
   }
 
   .dark {
@@ -82,8 +91,73 @@
 
   body {
     @apply bg-background text-foreground;
+    text-rendering: optimizeLegibility;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
+  }
+
+  html {
+    min-width: 360px;
+    scrollbar-gutter: stable;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  pre {
+    background-color: #16161e;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    padding: 1rem;
+    margin: 1.5rem 0;
+    line-height: 1;
+  }
+
+  pre::-webkit-scrollbar {
+    display: none;
+  }
+
+  pre {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  code {
+    font-family: "Menlo", "Monaco", "Courier New", monospace;
+    font-size: 14px;
+    padding: 0.2em 0.4em;
+    border-radius: 0.3em;
+    background-color: var(--color-gray-100);
+  }
+
+  pre code {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  pre code > span .sh__token--identifier {
+    color: white !important;
+  }
+
+  code:not(pre code) span {
+    font-weight: 500;
+    color: black !important;
+  }
+
+  pre code span {
+    color: white;
+    font-weight: 500;
+  }
+
+  hr {
+    color: var(--color-gray-200);
   }
 }
