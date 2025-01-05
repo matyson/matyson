@@ -14,20 +14,18 @@ const components = {
     <h1 className="mb-0 pt-12 font-medium fade-in" {...props} />
   ),
   h2: (props: HeadingProps) => (
-    <h2 className="mb-3 mt-8 font-medium text-gray-800" {...props} />
+    <h2 className="mb-3 mt-8 font-medium" {...props} />
   ),
   h3: (props: HeadingProps) => (
-    <h3 className="mb-3 mt-8 font-medium text-gray-800" {...props} />
+    <h3 className="mb-3 mt-8 font-medium" {...props} />
   ),
   h4: (props: HeadingProps) => <h4 className="font-medium" {...props} />,
-  p: (props: ParagraphProps) => (
-    <p className="leading-snug text-gray-800" {...props} />
-  ),
+  p: (props: ParagraphProps) => <p className="leading-snug" {...props} />,
   ol: (props: ListProps) => (
-    <ol className="list-decimal space-y-2 pl-5 text-gray-800" {...props} />
+    <ol className="list-decimal space-y-2 pl-5" {...props} />
   ),
   ul: (props: ListProps) => (
-    <ul className="list-disc space-y-1 pl-5 text-gray-800" {...props} />
+    <ul className="list-disc space-y-1 pl-5" {...props} />
   ),
   li: (props: ListItemProps) => <li className="pl-1" {...props} />,
   em: (props: ComponentPropsWithoutRef<"em">) => (
@@ -90,7 +88,7 @@ const components = {
   ),
   blockquote: (props: BlockquoteProps) => (
     <blockquote
-      className="border-l-3 ml-[0.075em] border-gray-300 pl-4 text-gray-700"
+      className="border-l-3 ml-[0.075em] border-gray-300 pl-4"
       {...props}
     />
   ),
