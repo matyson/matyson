@@ -160,4 +160,19 @@
   hr {
     color: var(--color-gray-200);
   }
+
+  /* Remove Safari input shadow on mobile */
+  input[type="text"],
+  input[type="email"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  table {
+    display: block;
+    max-width: fit-content;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }
