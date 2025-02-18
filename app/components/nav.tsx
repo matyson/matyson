@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { Link } from "next-view-transitions";
 import { cn } from "../lib/utils";
+import ThemeSwitch from "./theme-switch";
 
 const navItems = {
   "/": {
@@ -28,21 +29,24 @@ export function Navbar() {
           className="fade relative flex scroll-pr-6 flex-row items-start px-0 pb-0 md:relative md:overflow-auto"
           id="nav"
         >
-          <div className="flex flex-row space-x-0 pr-10">
-            {Object.entries(navItems).map(([path, { name }]) => {
-              return (
-                <Link
-                  key={path}
-                  href={path}
-                  className={cn(
-                    "relative flex px-2 py-1 align-middle transition-all hover:text-neutral-700 dark:hover:text-neutral-300",
-                    { "font-semibold text-emerald-500": pathname === path },
-                  )}
-                >
-                  {name}
-                </Link>
-              );
-            })}
+          <div className="flex w-full flex-row items-center justify-between space-x-0">
+            <div className="flex flex-row space-x-0 pr-10">
+              {Object.entries(navItems).map(([path, { name }]) => {
+                return (
+                  <Link
+                    key={path}
+                    href={path}
+                    className={cn(
+                      "relative flex px-2 py-1 align-middle transition-all hover:text-neutral-700 dark:hover:text-neutral-300",
+                      { "font-semibold text-emerald-500": pathname === path },
+                    )}
+                  >
+                    {name}
+                  </Link>
+                );
+              })}
+            </div>
+            <ThemeSwitch />
           </div>
         </nav>
       </div>

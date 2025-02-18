@@ -6,7 +6,6 @@ import { ThemeProvider } from "next-themes";
 import { ViewTransitions } from "next-view-transitions";
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/nav";
-import ThemeSwitch from "./components/theme-switch";
 import { cn } from "./lib/utils";
 
 export const metadata: Metadata = {
@@ -37,9 +36,6 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-              <div className="fixed top-4 right-4 z-40">
-                <ThemeSwitch />
-              </div>
             </ThemeProvider>
           </div>
         </body>
