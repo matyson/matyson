@@ -3,10 +3,18 @@
 import * as React from "react";
 import { motion as m } from "motion/react";
 import { useTheme } from "next-themes";
+import useSound from "use-sound";
 import { Button } from "./ui/button";
 
 export default function ThemeSwitch() {
   const { setTheme, resolvedTheme } = useTheme();
+  const [playLightOff] = useSound("/sounds/light-off.mp3", { volume: 0.5 });
+  const [playLightOn] = useSound("/sounds/light-on.mp3", { volume: 0.5 });
+
+  const handleClick = () => {
+    resolvedTheme === "dark" ? playLightOn() : playLightOff();
+    resolvedTheme === "dark" ? setTheme("light") : setTheme("dark");
+  };
 
   const raysVariants = {
     hidden: {
@@ -74,9 +82,7 @@ export default function ThemeSwitch() {
       variant="ghost"
       className="size-7"
       size="icon"
-      onClick={() =>
-        resolvedTheme === "dark" ? setTheme("light") : setTheme("dark")
-      }
+      onClick={handleClick}
     >
       <m.svg
         strokeWidth="4"
