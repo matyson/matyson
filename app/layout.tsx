@@ -37,7 +37,7 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-              <div className="fixed right-4 top-4 z-40">
+              <div className="fixed top-4 right-4 z-40">
                 <ThemeSwitch />
               </div>
             </ThemeProvider>
