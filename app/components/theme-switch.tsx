@@ -5,7 +5,7 @@ import { motion as m } from "motion/react";
 import { useTheme } from "next-themes";
 import { Button } from "./ui/button";
 
-export default function Nav() {
+export default function ThemeSwitch() {
   const { setTheme, resolvedTheme } = useTheme();
 
   const raysVariants = {
