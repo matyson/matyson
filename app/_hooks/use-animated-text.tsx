@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { animate, useMotionValue } from "framer-motion";
+import { animate, useMotionValue } from "motion/react";
 
 let delimiter = "";
 
