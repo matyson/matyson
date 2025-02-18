@@ -8,7 +8,7 @@ export default {
     "./public/**/*.svg",
     "./mdx-components.tsx",
   ],
-  darkMode: ["class"],
+  darkMode: "class",
   theme: {
     container: {
       center: true,
