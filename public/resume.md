@@ -1,13 +1,22 @@
 # Matheus Luís Bernardi
 
-Campinas, SP, Brazil | +55 19 981617320 | matheuslbernardi@gmail.com  
+Malmö, Sweden | +55 19 981617320 | +46 707877327 | matheuslbernardi@gmail.com  
 [Portfolio](http://matyson.vercel.app) | [GitHub](https://github.com/matyson) | [LinkedIn](https://www.linkedin.com/in/matheus-bernardi)
 
 ## Professional Experience
 
+### Software Developer | MAX IV Laboratory, Lund, Sweden
+
+**July 2025 - Present**
+
+- Developing mission critical software used at the macromolecular crystallography (MX) beamlines to conduct their experiments.
+- Supporting the beamlines to achieve operational excellence by following up beamline operation, commissioning and development tasks.
+- Maintaining and developing the highly specialized scientific data acquisition and controls framework MXCuBE-Web.
+- Improving the user experience of the control system web interfaces.
+
 ### Senior Technological Development Analyst | CNPEM, Campinas, SP
 
-**Control Software Group (2023 - Present)**
+**Control Software Group (2023 - 2025)**
 
 - Engineer web applications for accelerator control using React, Next.js, and tRPC
 - Lead infrastructure migration to CI/CD framework
