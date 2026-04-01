@@ -7,16 +7,10 @@ import ThemeSwitch from "./theme-switch";
 
 const navItems = {
   "/": {
-    name: "home",
+    name: "🏠 now",
   },
   "/work": {
     name: "work",
-  },
-  "/projects": {
-    name: "projects",
-  },
-  "/hobbies": {
-    name: "hobbies",
   },
 };
 
