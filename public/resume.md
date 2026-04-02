@@ -32,25 +32,11 @@ Malmö, Sweden | +55 19 981617320 | +46 707877327 | matheuslbernardi@gmail.com
 
 ## Key Projects
 
-### [Pianno](https://github.com/cnpem/pianno)
-
-- Developed web-based drawing tool for Pimega detector alignment
-- **Tech:** React, Next.js, Pixi.js, Node.js, Docker
-
-### [Quasars](https://github.com/Quasars/orange-spectroscopy)
-
-- Extended Orange suite with spectroscopy and SNOM data analysis tools
-- **Tech:** Python, Numpy, Scipy, Pandas, Orange3, Unittest
-
-### [DeepSirius UI](https://github.com/cnpem/deepsirius-ui)
-
-- Built web UIs for deep learning pipelines in image segmentation
-- **Tech:** React, Next.js, Auth.js, tRPC, PostgreSQL, Python, Docker
-
-### [Sophys Web](https://github.com/cnpem/sophys-web)
-
-- Monorepo of web apps and packages to interact with EPICS based control systems using [Bluesky](https://blueskyproject.io/) utilities
-- **Tech:** React, Next.js, Auth.js, tRPC, Docker, Kafka, EPICS, Bluesky, Turborepo
+Some projects i worked with: [Pianno](https://github.com/cnpem/pianno),
+[Quasars](https://github.com/Quasars/orange-spectroscopy),
+[DeepSirius UI](https://github.com/cnpem/deepsirius-ui),
+[Sophys Web](https://github.com/cnpem/sophys-web),
+[MXCuBE](https://github.com/mxcube)
 
 ## Education
 
